@@ -13,7 +13,7 @@ pipeline {
 					steps {
 							sh 'echo this is for test'
 							sh 'ls -lrt'
-							sh 'git --version'
+							sh 'ls
 							sh 'ls -a'
 							}
 						}

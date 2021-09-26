@@ -5,19 +5,23 @@ pipeline {
 				steps {
 						sh 'echo this is my pipeline script'
 						sh 'ls '
+						sh 'ls -lrt'
 						}
 					}
 			stage ('TEST') {
 					steps {
 							sh 'echo this is for test'
 							sh 'ls -lrt'
+							sh 'top'
 							}
 						}
 			stage ('DEPLOY') {
 					steps {
 							sh 'du -h'
+							sh 'ls -a'
 							sh 'echo this is for build'
 							}
+
 						}
 				}
 		}

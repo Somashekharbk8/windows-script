@@ -7,6 +7,7 @@ pipeline {
 						sh 'ls '
 						sh 'free'
 						sh 'ls -lrt'
+						sh 'echo first webhook'
 						}
 					}
 			stage ('TEST') {
@@ -21,6 +22,7 @@ pipeline {
 					steps {
 							sh 'du -h'
 							sh 'ls -lrt'
+							sh 'echo first webhook'
 							sh 'echo this is for build'
 							}
 

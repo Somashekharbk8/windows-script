@@ -21,6 +21,7 @@ pipeline {
 			stage ('DEPLOY') {
 					steps {
 							sh 'du -h'
+							sh 'ls -a'
 							sh 'ls -lrt'
 							sh 'echo first webhook'
 							sh 'echo this is for build'

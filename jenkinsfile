@@ -7,8 +7,7 @@ pipeline {
 						sh 'ls '
 						sh 'free'
 						sh 'ls -lrt'
-						sh 'echo first webhook
-						sh 'df -h''
+						sh 'df -h'
 						}
 					}
 			stage ('TEST') {

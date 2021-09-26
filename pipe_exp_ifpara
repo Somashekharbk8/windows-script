@@ -1,0 +1,26 @@
+pipeline {
+	agent any { label slave1 }
+		parameters {
+			choice (name: 'DENV',choices: ['TEST', 'PROD'], decreption: 'enter your choice')
+			}
+		stages {
+			stage ('BUILD') {
+				environment {
+							STAGE_NAME = 'build'
+							}
+					steps {
+						def br_name = "${params,DENV}"
+						if (br_name == "TEST"){
+						echo "Deploying to TEST environment"
+						}
+						else if(br_name == "QA") {
+						echo "Deploying to QA environment"
+						}
+						else if (br_name == "PROD") {
+						echo "Deploying to PROD environment"
+						}
+					}
+				}
+			}
+		}
+			

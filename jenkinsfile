@@ -6,7 +6,7 @@ pipeline {
 						sh 'echo this is my pipeline script'
 						sh 'ls '
 						sh 'ls -lrt'
-						sh 'top'
+						sh 'ls -lrt'
 						}
 					}
 			stage ('TEST') {
